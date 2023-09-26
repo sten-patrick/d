@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Veebileht</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f0f0f0; /* Change the background color */
+            color: #333; /* Change the text color */
+            font-family: Arial, sans-serif; /* Change the font */
+        }
+
+        #theme-toggle {
+            border: 2px solid #333; /* Change the border color */
+            background-color: #333; /* Change the button background color */
+            color: #fff; /* Change the button text color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Tere tulemast minu lehele</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button id="theme-toggle" class="btn btn-dark">Vaheta teemat</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (body.style.backgroundColor === 'rgb(240, 240, 240)') {
+                body.style.backgroundColor = '#333';
+                body.style.color = '#fff';
+                themeToggleBtn.textContent = 'Tume teema';
+                themeToggleBtn.style.backgroundColor = '#333';
+                themeToggleBtn.style.borderColor = '#333';
+            } else {
+                body.style.backgroundColor = '#f0f0f0';
+                body.style.color = '#333';
+                themeToggleBtn.textContent = 'Hele teema';
+                themeToggleBtn.style.backgroundColor = '#333';
+                themeToggleBtn.style.borderColor = '#333';
+            }
+        });
+    </script>
+</body>
+</html>
